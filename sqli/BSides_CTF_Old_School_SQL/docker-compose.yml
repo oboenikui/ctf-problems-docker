@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    volumes:
+      - "./mysql/init:/docker-entrypoint-initdb.d"
+    environment:
+      - MYSQL_ROOT_PASSWORD=toor
+    network_mode: "old-school-sql-network"
+  phpapp:
+    build: ./php
+    ports:
+      - "8080:80"
+    network_mode: "old-school-sql-network"
+
+networks:
+  old-school-sql-network:
