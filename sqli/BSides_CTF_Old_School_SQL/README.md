@@ -12,7 +12,7 @@ http://localhost:10001
 ```bash
 docker network create old-school-sql-network
 docker-compose up -d
-curl http://localhost:8080/setup.php
+curl http://localhost:10001/setup.php
 ```
 
 Note: Don't use docker or mysql commands to solve!
