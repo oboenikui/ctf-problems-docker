@@ -4,14 +4,14 @@
 
 ```
 Being the admin is great
-http://localhost:8080
+http://localhost:10001
 ```
 
 ## Run
 
 ```bash
 docker network create old-school-sql-network
-dokcer-compose up -d
+docker-compose up -d
 curl http://localhost:8080/setup.php
 ```
 

@@ -4,5 +4,5 @@ RUN apt-get update \
     && docker-php-ext-install mysql mysqli \
     && svn export --force https://github.com/teambi0s/BSides-CTF/trunk/2018/Web/Old-School-SQL/Admin /var/www/html \
     && rm -rf /var/www/html/solution.py \
-    && sed -i -e 's/localhost/mysql/' /var/www/html/config.php \
-    && sed -i -e 's/localhost/mysql/' /var/www/html/setup.php
+    && sed -i -e 's/localhost/bsides_ctf_old_school_sql_mysql/' /var/www/html/config.php \
+    && sed -i -e 's/localhost/bsides_ctf_old_school_sql_mysql/' /var/www/html/setup.php
