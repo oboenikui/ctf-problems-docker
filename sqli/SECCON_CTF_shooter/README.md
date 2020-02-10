@@ -1,33 +1,39 @@
-# BSides-CTF Old-School-SQL
+# SECCON CTF Shooter
 
 ## Problem
 
 ```
-Being the admin is great
-http://localhost:8080
+Enjoy the game!
+```
+
+### Difference
+
+The apk analysis is included in the original, but is not covered in this repository.  
+So access directly to below url.
+
+```
+http://localhost:10002/admin
 ```
 
 ## Run
 
 ```bash
-docker network create old-school-sql-network
-dokcer-compose up -d
-curl http://localhost:8080/setup.php
+./run.sh
 ```
 
-Note: Don't use docker or mysql commands to solve!
+Note: Don't use docker or *sql commands to solve!
 
 ## Shutdown
 
 ```bash
 docker-compose kill
 docker-compose rm
-docker image rm bsides_ctf_old_school_sql_phpapp
-docker network rm old-school-sql-network
+docker image rm seccon_ctf_shooter_webapp
+docker network rm shooter-network
 ```
 
 ## Source
 
 Don't access before solve
 
-https://github.com/teambi0s/BSides-CTF/tree/master/2018/Web/Old-School-SQL
+https://github.com/SECCON/SECCON2018_online_CTF/blob/master/Reversing/shooter/
